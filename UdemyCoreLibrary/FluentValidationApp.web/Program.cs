@@ -1,3 +1,6 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using FluentValidationApp.web.FluenValidators;
 using FluentValidationApp.web.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +12,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddSingleton<IValidator<Customer>, CustomerValidator>();
+//builder.Services.AddControllersWithViews().AddFluentValidation(options =>
+//{
+//    options.RegisterValidatorsFromAssemblyContaining<CustomerValidator>();
+//})
 
 
 var app = builder.Build();
