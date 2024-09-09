@@ -1,2 +1,2 @@
-# BilinmesiGerekenK-t-phanelerFC
+# BilinmesiGerekenKutuphanelerFC
 Fatih Çakıroğlu hocamızın udemy üzerinde hazırlamış olduğu .Net Core Developer - Bilinmesi Gereken Kütüphaneler kursu
